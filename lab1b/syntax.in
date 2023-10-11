@@ -1,0 +1,21 @@
+Predefined tokens are specified before :
+ifstmt ::= "if:" condition [{] stmt [}] ["else:" [{] stmt [}] ]
+whilestmt ::= "while:" condition [{] stmt [}]
+condition ::= expression "relation" expression
+realtion ::= "<" | "<=" | "&" | "/=" | ">=" | ">" | "|"
+structstmt ::= ifstmt | whilestmt
+iostmt ::= "in:" | "out:" identifier
+program ::= "{" decllist | cmpdstmt "}"
+decllist ::= declaration | declaration ";" decllist
+declaration ::= type ":" identifier
+type1 ::= "int" | "char" 
+arraydecl ::= "list" "int" identifier "{" nr "}"
+type  ::= type1|arraydecl
+cmpdstmt ::=  stmtlist 
+stmtlist ::= stmt | stmt ";" stmtlist
+stmt ::= simplstmt | structstmt
+simplstmt ::= assignstmt | iostmt | returnstmt 
+returnstmt ::= "return"
+assignstmt ::= identifier "=" expression
+expression ::= expression "+" | "-" | "/" | "*" factor | factor
+factor ::= "(" expression ")" | identifier

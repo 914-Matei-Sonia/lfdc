@@ -1,0 +1,32 @@
+Alphabet:
+	letters: A-Z,a-z;
+	
+	digits: 0-9;
+	
+	special ch: _,#,^;
+	
+	special symbols: 
+		operators: =, +, -, * /, <=, ==, \=, >=;
+		separators: {}, (), ;, space, ,;
+		reserved words: list, char, int, while, in, out, if, else, return, funtion, const;
+	
+	identifiers: sequence of letters, letter, digits or special ch.; first ch only letter:
+			identifier ::= letter | letter{letter}|{digit}|{special}
+    		letter ::= "A" | "B" | . ..| "Z"
+    		digit ::= "0" | "1" |...| "9"
+    		special ::= "_" | "#" | "^"
+
+
+    integer:
+    	intconst:= int
+	    int:=digit{int}
+    character:
+    	character := 'letter'|'digit'|'special'
+    string:
+    	constchar:="string"
+        string:=char{string}
+        char:=letter|digit|special
+
+
+
+
