@@ -1,5 +1,5 @@
 list
-char
+string
 int
 while
 in
@@ -7,8 +7,12 @@ out
 if
 else
 return
-funtion
+function
 const
+_
+#
+^
+"
 =
 +
 -
@@ -20,6 +24,9 @@ const
 >=
 >
 <
+&
+|
+!
 {
 }
 (

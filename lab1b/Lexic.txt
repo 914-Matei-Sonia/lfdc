@@ -1,35 +1,23 @@
 Alphabet:
-	letters: A-Z,a-z;
-	
-	digits: 0-9;
-	
-	special ch: _,#,^;
-	
-	special symbols: 
-		operators: =, +, -, *, /, <=, ==, \=, >=, >, <;
-		separators: {}, (), ;, space, ,;
-		reserved words: list, char, int, while, in, out, if, else, return, funtion, const;
-	
-	identifiers: sequence of letters, letter, digits or special ch.; first ch only letter:
-			identifier= letter{letter|digit|special}
-    		letter= "A" | "B" | ... | "Z" | "a" | ... | "z"
-    		digit= "0" | "1" | ... | "9"
-    		special= "_" | "#" | "^"
+- letters: A-Z, a-z;
+- decimal digits: 0-9;
+- special characters: _, #, ^, ", =, +, -, *, /, <=, ==, \=, >=, >, <, &, |, !, {}, (), ;, space, ,;
 
 
-    integer:
-    	intconst= int
-	    int= digit{int}
-	    number= nondigit | nondigit{digit}
-	    nondigit= "1" | ... | "9"
-	    digit= "0" | ... | "9"
-    character:
-    	character= letter | digit | special
-    string:
-    	constchar= sequence
-        sequence= char{sequence}
-        char= letter | digit | special
+Lexic:
+- operators: =, +, -, *, /, <=, ==, \=, >=, >, <, &, |, !;
+- separators: {}, (), ;, space, ,;
+- reserved words (keywords): list, string, int, while, in, out, if, else, return, function, const;
+- identifiers: sequence of letters, letter, digits or special ch. ("_", "#", "^"); first ch only letter;
+	identifier = letter {letter | digit | special}
+	letter = "A" | "B" | ... | "Z" | "a" | ... | "z"
+	digit = "0" | "1" | ... | "9"
+	special = "_" | "#" | "^"
 
-
-
-
+- constants:
+	1. integer:
+		intconst = nondigit {digit}
+		nondigit = "1" | ... | "9"
+	    digit = "0" | ... | "9"
+	2. string:
+		stringconst = '"' {letter | digit | special} '"'
