@@ -8,7 +8,7 @@ class HashTable:
         ]
 
     def hash(self, key):
-        return (hash(key) % self.size) + 1
+        return (sum([ord(letter) for letter in key]) % self.size) + 1
 
     def get(self, key):
         position = self.hash(key)
