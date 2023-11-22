@@ -4,7 +4,7 @@ func int max: int a, int b {
 
 func int main {
  	int a[3] = [4, 2, 3], n1, n2, max, i=0;
- 	while: i \= 3 {
+ 	while: i /= 3 {
  		n1 = a[i];
  		n2 = a[i+1];
  		if: max(n1,n2) == FALSE

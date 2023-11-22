@@ -1,5 +1,5 @@
 int main {
-	int a[5] = [1, 2, 3, 4, 5], l = 5, s, i=0, "hfh;
-	while i \= l
-		s = 0 + a[i]~
+	int a[5] = [1, 2, 3, 4, 5], l = 5, s, i=0, "hfh";
+	while i /= l
+		s = 0467 + a[i]~
 }
