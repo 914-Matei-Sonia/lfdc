@@ -13,6 +13,9 @@ class ProgramInternalForm:
         """
         return self.__tokens
 
+    def __getitem__(self, index: int) -> str:
+        return self.__tokens[index][0]
+
     def insert(self, token: str, type_t: Token) -> None:
         """
         Adds a token in the PIF.

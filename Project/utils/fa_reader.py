@@ -51,7 +51,7 @@ class FiniteAutomata:
                 case 'states':
                     self.__states = [elem.strip() for elem in value.split(',')]
                 case 'initial':
-                    self.__initial_states = value
+                    self.__initial_states = [value]
                 case 'final':
                     self.__final_states = [elem.strip() for elem in value.split(',')]
                 case 'transitions':
@@ -95,13 +95,13 @@ class FiniteAutomata:
             print("NDFA")
             return False
 
-        state = self.__initial_states
+        state = self.__initial_states[0]
         while input_sequence:
 
             symbol = input_sequence[0]
             input_sequence = input_sequence[1:]
             if (state, symbol) in self.__transitions:
-                state = self.__transitions[(state, symbol)]
+                state = self.__transitions[(state, symbol)][0]
             else:
                 return False
 
