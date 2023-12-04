@@ -28,7 +28,7 @@ condition = expression (relationalop | logicalop) expression
 
 returnstmt = "return"
 assignstmt = identifier "=" expression
-iostmt = ("in:" | "out:") {identifier | type | expression}
+iostmt = ("in:" | "out:") identifier
 ifstmt = "if:" condition (stmt | ["{"] stmt ["}"]) ["else:" (stmt | ["{"] stmt ["}])]
 whilestmt = "while:" condition (stmt | ["{"] stmt ["}"])
 
