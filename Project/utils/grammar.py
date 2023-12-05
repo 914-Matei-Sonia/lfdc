@@ -9,4 +9,4 @@ STR_QUOTE = '"'
 OPERATORS = ['+', '-', '*', '/', '=', '==', '/=', '!', '&', '|', '<', '<=', '>', '>=']
 OPERATORS_START = ['<', "=", ">", '+', '-', '*', '/', '!', '&', '|']
 SEPARATORS = ['(', ')', '[', ']', '{', '}', ':', ';', ',']
-RESERVED = ['int', 'str', 'list', 'const', 'if', 'else', 'while', 'in', 'out', 'func', 'const', 'return']
+RESERVED = ['int', 'str', 'list', 'const', 'if', 'else', 'while', 'in', 'out', 'return']

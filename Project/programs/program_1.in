@@ -1,14 +1,17 @@
-func int max: int a, int b {
-	return a > b;
-}
+{
+ 	int: a; int: b; int: c; int: maxim;
+ 	a = 1;
+ 	b = 20;
+ 	c = 0;
 
-func int main {
- 	int a[3] = [4, 2, 3], n1, n2, maxim, i=0;
- 	while: i /= 3 {
- 		n1 = a[i];
- 		n2 = a[i+1];
- 		if: max(n1,n2) == TRUE
- 			max = n1;
- 		else: max = n2;
+ 	if: a > b {
+ 	    maxim = a;
  	}
+ 	else {
+ 	    maxim = b;
+ 	};
+
+ 	if: c > b {
+ 	    maxim = c;
+ 	};
 }

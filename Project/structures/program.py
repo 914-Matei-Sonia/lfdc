@@ -1,5 +1,5 @@
-from program_internal_form import ProgramInternalForm
-from symbol_table import SymbolTable
+from structures.program_internal_form import ProgramInternalForm
+from structures.symbol_table import SymbolTable
 
 
 class Program:

@@ -1,7 +1,7 @@
 import unittest
 
 from utils.enums import Token
-from program_internal_form import ProgramInternalForm
+from structures.program_internal_form import ProgramInternalForm
 
 
 class PIFTestCase(unittest.TestCase):

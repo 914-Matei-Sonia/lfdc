@@ -2,7 +2,7 @@ from typing import IO
 
 from utils.error import LexicalErr
 from utils.grammar import *
-from program import Program
+from structures.program import Program
 from structures.buffer import Buffer
 from utils.enums import *
 

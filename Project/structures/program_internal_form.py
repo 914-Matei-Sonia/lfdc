@@ -14,7 +14,11 @@ class ProgramInternalForm:
         return self.__tokens
 
     def __getitem__(self, index: int) -> str:
-        return self.__tokens[index][0]
+        return self.__tokens[index]
+
+    def __add__(self, other):
+        self.__tokens.extend(other)
+        return self
 
     def insert(self, token: str, type_t: Token) -> None:
         """
