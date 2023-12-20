@@ -1,0 +1,32 @@
+WHITESPACE              [[:space:]]
+SPECIAL                 [_#^]
+UPPERCASE               [A-Z]
+LOWERCASE               [a-z]
+LETTER                  ({UPPERCASE}|{LOWERCASE})
+ZERO_DIGIT              0
+NONZERO_DIGIT           [1-9]
+DIGIT                   ({ZERO_DIGIT}|{NONZERO_DIGIT})
+OPERATOR                (&|\||==|\/=|<=|>=|<|>|\+|-|\*|\/|=|!)
+SEPARATOR               (\(|\)|\[|\]|\{|\}|:|;|,)
+RESERVED_WORD           (int|str|list|const|if|else|in|out|return|while)
+IDENTIFIER              ({SPECIAL}|{LETTER})+
+INT                     ({DIGIT}+)
+STR                     "({LETTER}|{DIGIT})+"
+%%
+{OPERATOR}              printf("(%s, OPERATOR)\n", yytext);
+{SEPARATOR}             printf("(%s, SEPARATOR)\n", yytext);
+{RESERVED_WORD}         printf("(%s, KEYWORD)\n", yytext);
+{IDENTIFIER}            printf("(%s, IDENTIFIER)\n", yytext);
+{INT}                   printf("(%s, INT)\n", yytext);
+{STR}                   printf("(%s, STR)\n", yytext);
+{WHITESPACE}
+.                       { printf("Unknown symbol: %s", yytext); return 1; }
+<<EOF>>                 return 0;
+%%
+int yywrap() {
+    return 1;
+}
+int main() {
+      yylex();
+      return 0;
+}

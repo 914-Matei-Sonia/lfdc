@@ -298,7 +298,7 @@ class LL1:
                     for symbol_production in production:
 
                         # if we have a right node
-                        if symbol != production[-1]:
+                        if symbol_production != production[-1]:
                             right_sibling = index_tree + 2
                         else:
                             right_sibling = 0

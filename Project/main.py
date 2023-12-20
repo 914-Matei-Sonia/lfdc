@@ -17,16 +17,16 @@ def main():
     # # fa.display_console()
     # print(fa.check("1234556"))
     #
-    # gr_path = "definitions/g1.txt"
-    # grammer = Grammar()
-    # grammer.readFromFile(gr_path)
-    # parser = LL1(grammer)
-    # parser.initialize()
-    # parser.pretty_print_parsing_table()
-    # parser.pretty_print_parsing_tree(parser.parse_input([("id", Token.SEPARATOR), ("+", Token.SEPARATOR), ("id", Token.SEPARATOR), ("*", Token.SEPARATOR), ("id", Token.SEPARATOR)]))
+    gr_path = "definitions/g1.txt"
+    grammer = Grammar()
+    grammer.readFromFile(gr_path)
+    parser = LL1(grammer)
+    parser.initialize()
+    parser.pretty_print_parsing_table()
+    parser.pretty_print_parsing_tree(parser.parse_input([("id", Token.SEPARATOR), ("+", Token.SEPARATOR), ("id", Token.SEPARATOR), ("*", Token.SEPARATOR), ("id", Token.SEPARATOR)]))
 
     try:
-        program_path = "programs/program_3.in"
+        program_path = "programs/program_err.in"
         st_path = "out/ST.out"
         pif_path = "out/PIF.out"
         file = open(program_path, 'r')

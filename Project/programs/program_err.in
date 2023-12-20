@@ -1,5 +1,12 @@
-int main {
-	int a[5] = [1, 2, 3, 4, 5], l = 5, s, i=0, "hfh";
-	while i /= l
-		s = 0467 + a[i]~
+{
+	int: a;int: l;int: s;int: i;
+	s = 0+;
+	a = [1,2;3];
+	l = 3;
+	i = 0;
+
+	while: i /= l {
+	    s = 4l67 + a{i};
+	    i = i + 1
+	};
 }
